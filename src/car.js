@@ -10,7 +10,8 @@ function Car(make, model, year, color){
 }
 
 Car.prototype.sale = function(newOwner){
-
+return  myCar.previousOwners.push(myCar.currentOwner);  
+   // should I have just written 'Manufacturer' ??
 };
 
 Car.prototype.paint = function(newColor){
