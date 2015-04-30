@@ -27,8 +27,9 @@ Car.prototype.off = function(){
 };
 
 Car.prototype.pickUp = function(new_passenger){
-  myCar.start();
-  myCar.passengers.push(new_passenger);
+  if (myCar.state === 'on') {
+    myCar.passengers.push(new_passenger);
+  } 
 };
 
 
