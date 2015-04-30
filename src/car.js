@@ -2,7 +2,8 @@ function Car(make, model, year, color){
   // this.make = ;
   // this.model = ;
   this.year = year;
-  // this.year = ;
+  // this.color = ;
+  this.state = 'off';
 }
 
 Car.prototype.sale = function(newOwner){
