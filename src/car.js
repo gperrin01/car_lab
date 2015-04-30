@@ -22,4 +22,8 @@ Car.prototype.start = function(){
   myCar.state = 'on';
 };
 
+Car.prototype.off = function(){
+  myCar.state = 'off';
+};
+
 module.exports=Car;
