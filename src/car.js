@@ -32,5 +32,11 @@ Car.prototype.pickUp = function(new_passenger){
   } 
 };
 
+Car.prototype.dropOff = function(){
+  myCar.passengers = [];
+};
+
+
+
 
 module.exports=Car;
