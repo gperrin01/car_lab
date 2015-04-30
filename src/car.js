@@ -33,7 +33,9 @@ Car.prototype.pickUp = function(new_passenger){
 };
 
 Car.prototype.dropOff = function(){
-  myCar.passengers = [];
+  if (myCar.state === 'on') {
+    myCar.passengers = [];
+  };
 };
 
 
