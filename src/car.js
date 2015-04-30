@@ -2,7 +2,7 @@ function Car(make, model, year, color){
   // this.make = ;
   // this.model = ;
   this.year = year;
-  // this.color = ;
+  this.color = color;
   this.state = 'off';
   this.previousOwners = [];
   this.currentOwner = 'Manufacturer';
@@ -12,11 +12,10 @@ function Car(make, model, year, color){
 Car.prototype.sale = function(newOwner){
   myCar.previousOwners.push(myCar.currentOwner); 
   myCar.currentOwner = newOwner; 
-   // should I have just written 'Manufacturer' ??
 };
 
 Car.prototype.paint = function(newColor){
-
+  myCar.color = newColor;
 };
 
 
