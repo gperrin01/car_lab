@@ -38,6 +38,13 @@ Car.prototype.dropOff = function(){
   };
 };
 
+Car.prototype.parking = function(){
+  if (myCar.state === 'on') {
+    myCar.off();
+    myCar.passengers = [];
+  }
+};
+
 
 
 

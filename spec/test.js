@@ -104,5 +104,36 @@ describe('Car', function(){
       expect(myCar.passengers[0]).to.equal("john");
     });
   });
+  
+  describe('#parking', function(){
+    it('should update the state to off', function(){
+      myCar.start();
+      myCar.pickUp("john");
+      myCar.dropOff("john");
+      myCar.parking();
+      expect(myCar.state).to.equal("off");
+    });
+
+    it('should remove passengers from the passengers array', function(){
+      myCar.start();
+      myCar.pickUp("john");
+      myCar.dropOff("john");
+      myCar.parking();
+      expect(myCar.passengers).to.be.empty;
+    });
+
+      it('should only work if the car is on', function(){
+      myCar.start();
+      myCar.pickUp("john");
+      myCar.dropOff("john");
+      myCar.off();
+      myCar.parking();  
+      expect(myCar.state).to.equal("off");
+    });
+
+
+  });
+
+
 
 });
